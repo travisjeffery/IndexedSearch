@@ -77,7 +77,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-command! ShowSearchIndex :call s:ShowCurrentSearchIndex(1,'')
+command! ShowSearchIndex :call s:ShowCurrentSearchIndex(1,'!')
 
 
 " before 061114  we had op invocation inside the function but this
@@ -86,14 +86,7 @@ command! ShowSearchIndex :call s:ShowCurrentSearchIndex(1,'')
 "                @/ and direction is restored at return from function
 "                We must have op invocation at the toplevel of mapping even though this
 "                makes mappings longer.
-nnoremap <silent>n :let v:errmsg=''<cr>:silent! norm! n<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
-nnoremap <silent>N :let v:errmsg=''<cr>:silent! norm! N<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
-nnoremap <silent>* :let v:errmsg=''<cr>:silent! norm! *<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
-nnoremap <silent># :let v:errmsg=''<cr>:silent! norm! #<cr>:call <SID>ShowCurrentSearchIndex(0,'!')<cr>
 
-
-nnoremap <silent>\/        :call <SID>ShowCurrentSearchIndex(1,'')<cr>
-" nnoremap <silent>\\        :call <SID>ShowCurrentSearchIndex(1,'')<cr>
 nnoremap <silent>g/        :call <SID>ShowCurrentSearchIndex(1,'')<cr>
 
 
