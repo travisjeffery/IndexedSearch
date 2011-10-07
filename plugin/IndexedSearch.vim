@@ -87,7 +87,7 @@ command! ShowSearchIndex :call s:ShowCurrentSearchIndex(1,'!')
 "                We must have op invocation at the toplevel of mapping even though this
 "                makes mappings longer.
 
-nnoremap <silent>g/        :call <SID>ShowCurrentSearchIndex(1,'')<cr>
+" nnoremap <silent>g/        :call <SID>ShowCurrentSearchIndex(1,'')<cr>
 
 
 " before 061120,  I had cmapping for <cr> which was very intrusive. Didn't work
