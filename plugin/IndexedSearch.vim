@@ -94,7 +94,7 @@ command! ShowSearchIndex :call s:ShowCurrentSearchIndex(1,'!')
 "                 with supertab iInde<c-x><c-p>(resulted in something like recursive <c-r>=
 " after  061120,  I remap [/?] instead of remapping <cr>. Works in vim6, too
 
-nnoremap / :call <SID>DelaySearchIndex(0,'')<cr>/
+" nnoremap / :call <SID>DelaySearchIndex(0,'')<cr>/
 nnoremap ? :call <SID>DelaySearchIndex(0,'')<cr>?
 
 
